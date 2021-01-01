@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter | Degrees, Minutes and Seconds to Decimal degree</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+   
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class=" container" id="app">
+        <h1 class="text-center pt-5 pb-3">Convert from Degrees, Minutes and Seconds to Decimal Degrees</h1>
+  
+        <form id="app_form">
+          <div class="latitude">
+            <label for="degree_lat">Enter Degrees, Minutes and Seconds for Latitude:</label>
+            <input type="number" id="degree_lat" placeholder="Degrees °"/>
+            <input type="number" id="minute_lat" placeholder="Minutes '"/>
+            <input type="number" id="second_lat" placeholder="Seconds ''"/>
+          </div>
+  
+          <div class="longitude">
+            <label htmlFor="degree_long">Enter Degrees, Minutes and Seconds for Longitude:</label>
+            <input type="number" id="degree_long" placeholder="Degrees °"/>
+            <input type="number" id="minute_long"  placeholder="Minutes '"/>
+            <input type="number" id="second_long" placeholder="Seconds ''"/>
+          </div>
+         
+          <div id="btn">
+            <input type="button" id="btn_btn" onclick="Calaculatelatitude()" value="Convert to Degrees"/>
+            <input type="submit" value="Clear Values"/>
+          </div>
+
+          <div class="results text-center pb-3">
+            <h4>Results</h4> 
+            <label for="results_lat">Latitude:</label>
+            <input type="text" id="results_lat"  placeholder="Latitude °" readOnly/>
+            <label id="long" for="results_long">Longitude:</label>
+            <input type="text" id="results_long" placeholder="Longitude °" readOnly/>
+          </div>
+  
+        </form>
+
+        <article>
+          <p> Latitude and Longitude coordinates are often presented in degrees, minutes, and seconds, such as 39° 45' 30" (39 degrees, 45 minutes, 30 seconds). So i decided to build a degree converter to help convert it to decimal degree.</p> 
+
+          <p>1 minute is equal to 60 seconds.</p>  
+          <p> 1 degree is equal to 1 hour, that is equal to 60 minutes or 3600 seconds.</p>
+           
+            <p> To calculate decimal degrees, I made use  of the DMS to decimal degree formula below:
+                Decimal Degrees = degrees + (minutes/60) + (seconds/3600)</p>
+            <b class="pb-5">DD = d + (min/60) + (sec/3600)</b> 
+        </article>
+    
+      </div>
+    
+      <script src="js/app.js"></script>
+</body>
+</html>
