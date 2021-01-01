@@ -40,6 +40,13 @@ input {
     display: flex ;
     justify-content: center;
     margin-bottom: 15px;
+    padding-top: 15px;
+}
+
+#btn input{
+    background-color: rgb(158, 224, 26);
+    color: rgb(34, 33, 33);
+    font-weight: 600;
 }
 
 #btn_btn{
